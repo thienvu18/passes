@@ -77,7 +77,7 @@ class EventTicketClass extends BaseClass
      * Optional.
      * A custom label to use for the confirmation code value on the card detail view.
      */
-    public ?string $customConfirmationCodeLabel;
+    public ?LocalizedString $customConfirmationCodeLabel;
 
     /**
      * Optional.
@@ -91,7 +91,7 @@ class EventTicketClass extends BaseClass
      * Optional.
      * A custom label to use for the seat value on the card detail view.
      */
-    public ?string $customSeatLabel;
+    public ?LocalizedString $customSeatLabel;
 
     /**
      * Optional.
@@ -105,7 +105,7 @@ class EventTicketClass extends BaseClass
      * Optional.
      * A custom label to use for the row value on the card detail view.
      */
-    public ?string $customRowLabel;
+    public ?LocalizedString $customRowLabel;
 
     /**
      * Optional.
@@ -119,7 +119,7 @@ class EventTicketClass extends BaseClass
      * Optional.
      * A custom label to use for the section value on the card detail view.
      */
-    public ?string $customSectionLabel;
+    public ?LocalizedString $customSectionLabel;
 
     /**
      * Optional.
@@ -133,5 +133,5 @@ class EventTicketClass extends BaseClass
      * Optional.
      * A custom label to use for the gate value on the card detail view.
      */
-    public ?string $customGateLabel;
+    public ?LocalizedString $customGateLabel;
 }
