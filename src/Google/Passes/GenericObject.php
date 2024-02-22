@@ -3,14 +3,35 @@
 namespace Chiiya\Passes\Google\Passes;
 
 use Chiiya\Passes\Common\Validation\HexColor;
+use Chiiya\Passes\Common\Validation\ValueIn;
 use Chiiya\Passes\Google\Components\Common\Image;
 use Chiiya\Passes\Google\Components\Common\LocalizedString;
 use Chiiya\Passes\Google\Components\Generic\Notifications;
+use Chiiya\Passes\Google\Enumerators\Generic\GenericType;
 
 class GenericObject extends AbstractObject
 {
     /** @var string */
     final public const IDENTIFIER = 'genericObject';
+
+    /**
+     * Optional.
+     * If unset, Google will compute status based on data from other sources, such as FlightStats, etc.
+     */
+    #[ValueIn([
+        GenericType::GENERIC_TYPE_UNSPECIFIED,
+        GenericType::GENERIC_SEASON_PASS,
+        GenericType::GENERIC_VOUCHER,
+        GenericType::GENERIC_GYM_MEMBERSHIP,
+        GenericType::GENERIC_LIBRARY_MEMBERSHIP,
+        GenericType::GENERIC_RESERVATIONS,
+        GenericType::GENERIC_AUTO_INSURANCE,
+        GenericType::GENERIC_HOME_INSURANCE,
+        GenericType::GENERIC_ENTRY_TICKET,
+        GenericType::GENERIC_RECEIPT,
+        GenericType::GENERIC_OTHER,
+    ])]
+    public ?string $genericType;
 
     /**
      * Required
